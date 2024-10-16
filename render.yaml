@@ -1,12 +1,12 @@
 databases:
-  - name: rails-note-app
+  - name: postgres
     databaseName: deploy_rails_production
     user: deploy_rails_production
     plan: free
 
 services:
   - type: web
-    name: postgres
+    name: rails-note-app
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"

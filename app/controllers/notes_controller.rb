@@ -5,7 +5,6 @@ class NotesController < ApplicationController
     end
 
     def create
-        debugger
         @note = Note.new(title: params[:title], content: params[:content], created_by: params[:created_by])
         if @note.save
             render json: @note, status: :created

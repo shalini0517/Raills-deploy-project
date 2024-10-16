@@ -1,0 +1,37 @@
+<div style="background-color: #f2f2f2; padding: 20px;">
+    <div style="text-align: center;">
+        <h1>Notes</h1>
+        <ul>
+        <% @notes.each do |note| %>
+            <p>Notes name: <b><%= note.title %></b></p>
+            <p>content: <%= note.content %></p>
+            <p>created by: <%= note.created_by %></p>
+        <%end %>
+        </ul>
+    </div>
+
+    <div style="text-align: center;">
+    <h2>Create a New Note</h2>
+    <%= form_with model: @note, url: notes_path, method: :post do |form| %>
+        <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+        </div>
+        <br/>
+
+        <div>
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+        </div>
+        <br/>
+
+        <div>
+        <%= form.label :created_by %>
+        <%= form.text_field :created_by %>
+        </div>
+        <br/>
+
+        <%= form.submit "Create Note" %>
+    <% end %>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 databases:
-  - name: postgres
+  - name: rails-note-app
     databaseName: deploy_rails_production
     user: deploy_rails_production
     plan: free

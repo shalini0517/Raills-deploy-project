@@ -63,7 +63,7 @@ test:
   adapter: postgresql
   database: deploy_test_db
   username: postgres
-  password: PASSWORD
+  password: ENV['POSTGRES_PASSWORD']
   host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,

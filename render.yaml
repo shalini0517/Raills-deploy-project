@@ -1,12 +1,12 @@
 databases:
   - name: postgres
-    databaseName: deploy_rails_production
+    databaseName: postgres
     user: postgres
     plan: free
 
 services:
   - type: web
-    name: deploy_rails_production
+    name: postgres
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"

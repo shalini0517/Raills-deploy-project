@@ -1,7 +1,7 @@
 databases:
   - name: postgres
-    databaseName: postgres
-    user: postgres
+    databaseName: deploy_rails_production
+    user: deploy-rails
     plan: free
 
 services:

@@ -25,7 +25,7 @@ development:
   adapter: postgresql
   database: deploy_development_db
   username: postgres
-  password: postgres
+  password: deploy
   host: localhost
 
   # The specified database role being used to connect to PostgreSQL.
@@ -63,7 +63,7 @@ test:
   adapter: postgresql
   database: deploy_test_db
   username: postgres
-  password: postgres
+  password: deploy
   host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -90,4 +90,4 @@ production:
   <<: *default
   database: deploy_rails_production
   username: postgres
-  password: postgres
+  password: deploy
